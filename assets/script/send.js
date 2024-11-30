@@ -33,7 +33,7 @@ function sendMessage() {
     data.set('Request', message);
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbx6CnUP6XLQ6_rj0IvMIFmxrcT4H3lFRFFI96ET_zEW2UtO6JMwUQiWWnqzOfqHMRXfTQ/exec', true);
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbx9bOOOPoaohWIHCGFsD41SqfOMAT7-EuU3u_ElCZ7kKbhmv--45mzp66aGkXAgrdyLEw/exec', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function () {
         if (xhr.status === 200) {
