@@ -26,5 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 projectList.appendChild(projectDiv);
             });
         })
-        .catch(error => console.error('Error loading config:', error));
+        .catch(error => {
+            console.error('Error loading config.json:', error);
+            const projectList = document.getElementById('projects-list');
+            projectList.innerHTML = '<p>Failed to load project data. Please try again later.</p>';
+        });
 });

@@ -7,8 +7,8 @@ body, h1, h2, p, ul, li, a {
 
 /* Body */
 body {
-    background-color: white;
-    color: black;
+    background-color: #ffffff;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -40,7 +40,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
@@ -90,7 +90,7 @@ h2 {
 .btn {
     padding: 10px 20px;
     background-color: #007acc;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
