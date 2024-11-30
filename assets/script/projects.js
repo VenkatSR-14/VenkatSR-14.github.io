@@ -17,7 +17,21 @@ const ProjectsData = [
     name: "CodeSage",
     logo: "https://img.icons8.com/?size=100&id=Yb9JrzoPrVF4&format=png&color=000000",
     description:
-      "A platform for learning, practicing, and evaluating coding skills with real-time problem solving and machine learning insights.",
+      "A platform that provides automated code reviews and optimization suggestions using personalized fine tuned LLMs and GPT",
+    link: "#", // Replace with the actual link when available
+  },
+  {
+    name: "Video-to-Mp3 Converter",
+    logo: "https://img.icons8.com/?size=100&id=E4pQFsDiWJli&format=png&color=000000",
+    description:
+      "A platform built using the microservices architecture to convert a video to MP3 format",
+    link: "#", // Replace with the actual link when available
+  },
+  {
+    name: "Vist Github for More",
+    logo: "https://img.icons8.com/?size=100&id=43227&format=png&color=000000",
+    description:
+      "Check out my Deep learning, Machine learning projects which I did for learning model architectures!",
     link: "#", // Replace with the actual link when available
   },
 ];
