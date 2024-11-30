@@ -1,0 +1,31 @@
+{
+    "name": "Venkat SR",
+    "title": "Full-Stack Ninja | AI Wizard | Code Rockstar",
+    "about": "Hi! I’m Venkat—your go-to coder with a knack for turning wild ideas into reality! I’m passionate about building impactful apps, playing with machine learning models, and creating magic with data.",
+    "image": "assets/images/profile.jpg",
+    "projects": [
+      {
+        "name": "ChessMaster",
+        "description": "A chess game platform with analytics and AI bot support.",
+        "url": "https://github.com/VenkatSR-14/chessmaster"
+      },
+      {
+        "name": "CodeQuest",
+        "description": "A LeetCode-inspired coding practice platform.",
+        "url": "https://github.com/VenkatSR-14/codequest"
+      },
+      {
+        "name": "AI Scribbler",
+        "description": "An app that generates fun and quirky AI-written stories.",
+        "url": "https://github.com/VenkatSR-14/aiscribbler"
+      }
+    ],
+    "resume": "resume.pdf",
+    "contact": {
+      "email": "venkat@example.com",
+      "linkedin": "https://linkedin.com/in/venkatSR",
+      "github": "https://github.com/VenkatSR-14",
+      "twitter": "https://twitter.com/venkatrocks"
+    }
+  }
+  
