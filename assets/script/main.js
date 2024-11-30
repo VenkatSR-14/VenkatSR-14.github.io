@@ -24,7 +24,7 @@ function initThemeButtonEvent() {
     span.addEventListener("click", () => {
       switch (index) {
         case 0: {
-          setTheme("#ffffff", "#000000", "#f3f3f3");
+          setTheme("#13071f", "#9900ff", "#9900ff5f");
           break;
         }
         case 1: {
