@@ -263,7 +263,7 @@ main #expertise-section #expertise-card-container .expertise-card img {
 }
 main #expertise-section #expertise-card-container .expertise-card span {
   margin-left: 12px;
-  font-size: var(--subheading-size);
+  font-size: 20px;
 }
 
 /*--------------------------------------------------------------
