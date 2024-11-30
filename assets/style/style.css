@@ -246,7 +246,7 @@ main #expertise-section {
 main #expertise-section #expertise-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, auto));
-  gap: 12px;
+  gap: 14px;
   margin-top: 12px;
 }
 main #expertise-section #expertise-card-container .expertise-card {
@@ -259,7 +259,7 @@ main #expertise-section #expertise-card-container .expertise-card {
 }
 main #expertise-section #expertise-card-container .expertise-card img {
   height: 60px;
-  width: 60px;
+  width: 65px;
 }
 main #expertise-section #expertise-card-container .expertise-card span {
   margin-left: 12px;
