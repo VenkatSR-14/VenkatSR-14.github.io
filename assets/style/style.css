@@ -364,6 +364,27 @@ footer #contact-section #contact-container #contact-form form button {
   color: var(--color-text);
   transition: all 0.8s;
 }
+.resume-button {
+  background-color: transparent; /* Transparent to blend with the dark background */
+  border: 2px solid #bb86fc; /* Border color matching the theme */
+  color: #bb86fc; /* Text color matching the theme */
+  padding: 10px 20px; /* Padding for a comfortable button size */
+  font-size: 16px; /* Font size for readability */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  cursor: pointer; /* Pointer cursor to indicate clickability */
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.resume-button:hover {
+  background-color: #bb86fc; /* Background on hover to stand out */
+  color: #121212; /* Contrast text color on hover */
+}
+
+.resume-button:active {
+  transform: scale(0.95); /* Slight scale for click effect */
+}
+
+
 footer #contact-section #contact-container #contact-form form button:hover {
   background-color: var(--color-primary);
   cursor: pointer;
