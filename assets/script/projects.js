@@ -10,7 +10,7 @@ const ProjectsData = [
     name: "Real-Time Online Multiplayer Chess Game",
     logo: "https://img.icons8.com/?size=100&id=36032&format=png&color=000000",
     description:
-      "A distributed online chess game featuring real-time synchronization and scalability. Built using React, .NET Core, Socket.io, and Redis.",
+      "A distributed online chess game featuring real-time synchronization and scalability. Built using React, .NET Core, SignalR, and Redis.",
     link: "https://github.com/VenkatSR-14/Online-Multiplayer-Chess-Game", // Replace with the actual link when available
   },
   {
