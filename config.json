@@ -4,30 +4,41 @@
     "name": "Venkat Srinivasa Raghavan",
     "title": "Software Developer | Data Scientist | ML Engineer",
     "about": {
-      "intro": "Hello! I’m Venkat Srinivasa Raghavan, a dedicated software developer and data enthusiast currently pursuing my Master of Science in Data Science at Northeastern University, Boston.",
+      "intro": "Hello! I’m Venkat Srinivasa Raghavan, a passionate software developer currently pursuing my Master's in Data Science at Northeastern University.",
       "sections": [
-        "My professional journey began after earning my Bachelor's in Engineering from R V College of Engineering in Bengaluru, India. I honed my skills at Airbus, contributing to scalable systems for aircraft hardware analytics and automating flight testing processes.",
-        "At Northeastern, I am deeply engaged in research and competitive programming, contributing as a Teaching Assistant and excelling in real-world projects like CodeQuest, CodeSage, and a real-time multiplayer chess game.",
-        "My career aspirations are rooted in leveraging data-driven insights and scalable software solutions to solve complex problems, making a meaningful impact in the tech world."
+        "With a strong foundation in scalable systems and analytics, I solve complex problems through innovative software solutions.",
+        "Beyond work, I enjoy competitive programming, chess, and badminton, which keep me sharp and energized."
       ]
     }
   },
+  "skills": [
+    "Python, Java, JavaScript, C++",
+    "SQL, PostgreSQL, MongoDB",
+    "React, Node.js, TailwindCSS",
+    "Scikit-Learn, TensorFlow, PyTorch",
+    "Docker, Kubernetes, Git"
+  ],
+  "achievements": [
+    { "icon": "🏆", "text": "3-Time Competitive Programming Champion" },
+    { "icon": "🎖️", "text": "LeetCode Top 800 Global Rank" },
+    { "icon": "🥇", "text": "Kaggle Competition Winner" }
+  ],
   "projects": [
     {
       "name": "CodeSage",
-      "description": "A smart code review system powered by AI, helping developers write better code.",
+      "description": "A smart code review system powered by AI.",
       "url": "https://github.com/VenkatSR-14/Codesage",
       "image": "assets/images/codesage.jpeg"
     },
     {
       "name": "CodeQuest",
-      "description": "An interactive platform for practicing competitive programming.",
+      "description": "A platform for practicing competitive programming.",
       "url": "https://github.com/VenkatSR-14/CodeQuest",
       "image": "assets/images/codequest.jpeg"
     },
     {
       "name": "Chess Game",
-      "description": "A feature-rich chess platform with analytics and AI-powered opponents.",
+      "description": "A chess platform with AI-powered opponents.",
       "url": "https://github.com/VenkatSR-14/Online-Multiplayer-Chess-Game",
       "image": "assets/images/chessgame.jpeg"
     }
