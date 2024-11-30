@@ -3,7 +3,14 @@
     "image": "assets/images/profile.png",
     "name": "Venkat Srinivasa Raghavan",
     "title": "Software Developer | Data Scientist | ML Engineer",
-    "about": "I am a passionate software developer with a strong focus on building innovative and scalable applications. With experience in backend development, data science, and machine learning, I strive to bridge technology and creativity to solve complex problems."
+    "about": {
+      "intro": "Hello! I’m Venkat Srinivasa Raghavan, a dedicated software developer and data enthusiast currently pursuing my Master of Science in Data Science at Northeastern University, Boston.",
+      "sections": [
+        "My professional journey began after earning my Bachelor's in Engineering from R V College of Engineering in Bengaluru, India. I honed my skills at Airbus, contributing to scalable systems for aircraft hardware analytics and automating flight testing processes.",
+        "At Northeastern, I am deeply engaged in research and competitive programming, contributing as a Teaching Assistant and excelling in real-world projects like CodeQuest, CodeSage, and a real-time multiplayer chess game.",
+        "My career aspirations are rooted in leveraging data-driven insights and scalable software solutions to solve complex problems, making a meaningful impact in the tech world."
+      ]
+    }
   },
   "projects": [
     {

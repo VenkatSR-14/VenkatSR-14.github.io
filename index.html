@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Venkat Srinivasa Raghavan | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <img id="profile-pic" alt="Your profile picture" class="profile-pic">
+            <img id="profile-pic" alt="Profile Picture" class="profile-pic">
             <h1 id="profile-name"></h1>
             <p id="profile-title"></p>
         </div>
@@ -25,41 +25,45 @@
     </nav>
 
     <main>
-        <section id="about">
+        <section id="about" class="section">
             <div class="container">
                 <h2>About Me</h2>
-                <p id="about-text"></p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div id="projects-list">
-                    <!-- Projects will be dynamically added here -->
+                <div class="about-content">
+                    <div class="about-text">
+                        <p id="about-intro"></p>
+                        <div id="about-sections"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="resume">
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Top Projects</h2>
+                <div id="projects-list" class="projects-grid"></div>
+                <p><a href="https://github.com/VenkatSR-14" target="_blank" class="btn">Visit My GitHub for More Projects</a></p>
+            </div>
+        </section>
+
+        <section id="resume" class="section">
             <div class="container">
                 <h2>Resume</h2>
                 <p><a href="resume.pdf" target="_blank" class="btn">Download My Resume</a></p>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="section">
             <div class="container">
                 <h2>Contact</h2>
-                <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
-                <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+                <p>Email: <a href="mailto:sraghavanvenkat@gmail.com">sraghavanvenkat@gmail.com</a></p>
+                <p>Phone: +1 206-518-8678</p>
+                <p>GitHub: <a href="https://github.com/VenkatSR-14" target="_blank">github.com/VenkatSR-14</a></p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Venkat Srinivasa Raghavan. All rights reserved.</p>
     </footer>
 
     <script src="scripts.js" defer></script>

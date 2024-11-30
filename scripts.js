@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('profile-pic').src = data.profile.image;
             document.getElementById('profile-name').textContent = data.profile.name;
             document.getElementById('profile-title').textContent = data.profile.title;
-            document.getElementById('about-text').textContent = data.profile.about;
+
+            // Load About Section
+            document.getElementById('about-intro').textContent = data.profile.about.intro;
+            const aboutSections = data.profile.about.sections.map(section => `<p>${section}</p>`).join('');
+            document.getElementById('about-sections').innerHTML = aboutSections;
 
             // Load Projects
             const projectList = document.getElementById('projects-list');
