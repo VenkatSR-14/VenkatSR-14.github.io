@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkat SR | Rockstar Coder</title>
+    <title>Your Name | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img id="profile-image" src="" alt="Venkat's smiling face!" />
-        <h1 id="name"></h1>
-        <p id="title"></p>
+        <div class="container">
+            <img src="assets\images\profile.png" alt="Your profile picture" class="profile-pic">
+            <h1>Your Name</h1>
+            <p>Software Developer | Data Scientist | ML Engineer</p>
+        </div>
     </header>
+
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -20,28 +23,49 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
     <main>
         <section id="about">
-            <h2>About Me</h2>
-            <p id="about-text"></p>
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    I am a highly motivated software developer with expertise in creating scalable and efficient
+                    applications. My work spans backend development, data analysis, and machine learning, with a
+                    focus on delivering impactful solutions.
+                </p>
+            </div>
         </section>
+
         <section id="projects">
-            <h2>Projects</h2>
-            <ul id="project-list"></ul>
+            <div class="container">
+                <h2>Projects</h2>
+                <div id="projects-list">
+                    <!-- Projects will be loaded here by JavaScript -->
+                </div>
+            </div>
         </section>
+
         <section id="resume">
-            <h2>Resume</h2>
-            <p><a id="resume-link" href="" target="_blank">Check Out My Resume</a></p>
+            <div class="container">
+                <h2>Resume</h2>
+                <p><a href="resume.pdf" target="_blank" class="btn">View My Resume</a></p>
+            </div>
         </section>
+
         <section id="contact">
-            <h2>Contact</h2>
-            <ul id="contact-list"></ul>
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+                <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>✨ Powered by caffeine and creativity ✨</p>
-        <p>© 2024 Venkat SR. All rights reserved.</p>
+        <p>&copy; 2024 Venkat Srinivasa Raghavan. All rights reserved.</p>
     </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
