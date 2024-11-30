@@ -34,7 +34,7 @@ function sendMessage() {
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://script.google.com/macros/s/AKfycbx6CnUP6XLQ6_rj0IvMIFmxrcT4H3lFRFFI96ET_zEW2UtO6JMwUQiWWnqzOfqHMRXfTQ/exec', true);
-
+    xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function () {
         if (xhr.status === 200) {
             setResponseText("Thank You for sending the message.");
