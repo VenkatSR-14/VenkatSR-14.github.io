@@ -31,14 +31,13 @@
 ## **Sneak Peek of Site** 🙈:
 ![Sneak Peek of Portfolio](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiT12J6TMmnztLimQW8gp9CFvnd3abDzghSMsDAsW8cCj7qEYABlmWlPuYAW6zuNKe5S91Y5vnn0CJ1T30TSGHpZXquQwXhTk-qghf1HCih6WITcMQW5q101FQSYTbtIjeQl97pTap8kG4My51MkFV-HtHWsv2FE4c6cPzkGyBfkjW58Ecu5BgTbbqVP8/s1893/sayyed-sohel.png)
 
-👉 [**Live Preview**](https://sohez.github.io/)
+👉 [**Live Preview**](https://venkatsr-14.github.io//)
 
 ---
 
 ## **📬 Contact**
 Feel free to reach out to me through the following platforms:
 
-📸 [**Instagram**](https://www.instagram.com/sohel_code.py/)
 
 <h2>☕️ Coffee? yes!</h2>
 <p>
