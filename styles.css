@@ -118,3 +118,11 @@ footer {
     background-color: #333;
     font-size: 0.9rem;
 }
+
+/* Add styles for project images */
+.project img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
