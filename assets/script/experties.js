@@ -46,7 +46,7 @@ const ExpertiseData = [
   // Cloud and Big Data
   {
     name: "AWS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    logo: "https://img.icons8.com/?size=100&id=33039&format=png&color=000000",
   },
   {
     name: "Docker",
@@ -58,7 +58,7 @@ const ExpertiseData = [
   },
   {
     name: "Snowflake",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Snowflake_Logo.svg/1200px-Snowflake_Logo.svg.png",
+    logo: "https://img.icons8.com/?size=100&id=Mvbzy3ZDRcVj&format=png&color=000000",
   },
   {
     name: "Jenkins",
@@ -98,7 +98,7 @@ const ExpertiseData = [
   },
   {
     name: "TailwindCSS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    logo: "https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000",
   },
   {
     name: "GraphQL",
