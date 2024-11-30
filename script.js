@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const projects = [
         {
-            name: "ChessMaster",
-            description: "A chess game platform with AI-powered analytics.",
-            url: "https://github.com/yourusername/chessmaster"
+            name: "CodeSage",
+            description: "A smart coding assistant powered by AI, helping developers write better code.",
+            url: "https://github.com/yourusername/codesage"
         },
         {
             name: "CodeQuest",
-            description: "A LeetCode-inspired coding platform.",
+            description: "An interactive platform for practicing competitive programming.",
             url: "https://github.com/yourusername/codequest"
         },
         {
-            name: "AI Scribbler",
-            description: "An app that generates creative AI-written stories.",
-            url: "https://github.com/yourusername/aiscribbler"
+            name: "Chess Game",
+            description: "A feature-rich chess platform with analytics and AI-powered opponents.",
+            url: "https://github.com/yourusername/chessgame"
         }
     ];
 

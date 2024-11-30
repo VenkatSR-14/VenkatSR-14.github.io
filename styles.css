@@ -8,8 +8,8 @@ body, h1, h2, p, ul, li, a {
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #000;
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -21,17 +21,18 @@ body {
 
 /* Header Section */
 header {
-    background-color: #007acc;
-    color: white;
     text-align: center;
     padding: 40px 0;
+    background-color: #333;
+    border-bottom: 1px solid #fff;
 }
 
 header .profile-pic {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px; /* Larger Image */
+    height: 200px;
     margin-bottom: 20px;
+    border: 5px solid #fff;
 }
 
 header h1 {
@@ -44,7 +45,8 @@ header p {
 
 /* Navigation */
 nav {
-    background-color: #333;
+    background-color: #222;
+    text-align: center;
     padding: 10px 0;
 }
 
@@ -55,51 +57,58 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
-    font-weight: bold;
+    color: #fff;
     font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #007acc;
+    color: #aaa;
 }
 
-/* Section Styling */
+/* Sections */
 main section {
     padding: 40px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333;
 }
 
 h2 {
     font-size: 1.8rem;
-    color: #007acc;
     margin-bottom: 20px;
+    color: #aaa;
 }
 
 /* Projects */
-#projects .project {
-    margin-bottom: 20px;
+#projects-list .project {
+    margin-bottom: 30px;
 }
 
-#projects .project h3 {
-    font-size: 1.2rem;
+#projects-list .project h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-/* Button Style */
+#projects-list .project p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007acc;
+    background-color: #333;
     color: white;
     font-weight: bold;
     border-radius: 5px;
     text-decoration: none;
+    border: 2px solid white;
     transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #005fa3;
+    background-color: #555;
 }
 
 /* Footer */
@@ -107,6 +116,5 @@ footer {
     text-align: center;
     padding: 20px 0;
     background-color: #333;
-    color: white;
     font-size: 0.9rem;
 }
