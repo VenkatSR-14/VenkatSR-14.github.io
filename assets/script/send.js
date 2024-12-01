@@ -1,8 +1,9 @@
 const form = document.getElementById("form");
 const responseTextElement = document.getElementById("message-response");
 
-function setResponseText(text) {
+function setResponseText(text, isError = false) {
     responseTextElement.innerText = text;
+    responseTextElement.style.color = isError ? "red" : "green";
 }
 
 form.addEventListener("submit", function (e) {
@@ -11,48 +12,41 @@ form.addEventListener("submit", function (e) {
     sendMessage();
 });
 
-function isValidEmail(email) {
-    const emailReg = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    return emailReg.test(email);
-}
-
 function sendMessage() {
     const email = document.getElementById("Email").value.trim();
     const message = document.getElementById("Message").value.trim();
 
+    // Validate inputs
     if (!email || !message) {
-        return setResponseText("Please fill both the fields.");
-    }
-    if (!isValidEmail(email)) {
-        return setResponseText("Enter a valid email address.");
+        return setResponseText("Please fill in both fields.", true);
     }
 
-    const data = new FormData();
-    data.set('Name', '@PORTFOLLIO');
-    data.set('Email', email);
-    data.set('Request', message);
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbx9bOOOPoaohWIHCGFsD41SqfOMAT7-EuU3u_ElCZ7kKbhmv--45mzp66aGkXAgrdyLEw/exec', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            setResponseText("Thank You for sending the message.");
-            setTimeout(resetTheForm, 2000);
-        } else {
-            setResponseText("Something went wrong, try again.");
-        }
+    const payload = {
+        Name: "@PORTFOLIO",
+        Email: email,
+        Request: message
     };
 
-    xhr.onerror = function () {
-        setResponseText("Something went wrong, try again.");
-    };
-
-    xhr.send(data);
-}
-
-function resetTheForm() {
-    responseTextElement.innerText = "";
-    document.getElementById("Email").value = "";
-    document.getElementById("Message").value = "";
+    // Send POST request using Fetch API
+    fetch('https://script.google.com/macros/s/AKfycbwcdSGSAsFxJgmD73ofxQkNCHBuMskCB-LR3xyOMoCInXgZ-7rR16Yv0FAYOu9BMpWijA/exec', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(payload)
+    })
+        .then((response) => {
+            if (response.ok) {
+                return response.text(); // Read the plain text response
+            } else {
+                throw new Error("Failed to send message.");
+            }
+        })
+        .then((text) => {
+            setResponseText(text); // Display the response text
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            setResponseText("An error occurred. Please try again.", true);
+        });
 }
