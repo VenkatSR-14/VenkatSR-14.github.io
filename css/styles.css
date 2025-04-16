@@ -234,6 +234,7 @@ nav {
     font-weight: 600;
     color: var(--accent-color);
     margin-bottom: 20px;
+    min-height: 2.5rem;
 }
 
 .hero-content p {
@@ -289,6 +290,15 @@ nav {
     flex: 1;
     display: flex;
     justify-content: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--primary-color);
 }
 
 .image-placeholder {

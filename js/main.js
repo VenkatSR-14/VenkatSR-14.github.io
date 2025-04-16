@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Typed.js
-    const typed = new Typed('.typed-text', {
-        strings: ['Software Engineer', 'Data Scientist', 'Full Stack Developer', 'Machine Learning Engineer'],
-        typeSpeed: 50,
-        backSpeed: 30,
-        backDelay: 2000,
-        loop: true
-    });
+    // Initialize Typed.js with a slight delay to ensure it loads properly
+    setTimeout(function() {
+        const typed = new Typed('.typed-text', {
+            strings: ['Software Engineer', 'Data Scientist', 'Full Stack Developer', 'Machine Learning Engineer'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    }, 500);
 
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
@@ -51,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        navLinks.forEach(link => {
+        navLinksa.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
@@ -102,6 +106,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+    });
+
+    // Fix for project images
+    document.querySelectorAll('.project-img img').forEach(img => {
+        img.onerror = function() {
+            this.src = 'assets/images/placeholder.jpg';
+        };
     });
 
     // Contact Form Submission
