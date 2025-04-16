@@ -14,18 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const mobileNavLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', function() {
         this.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        mobileNavLinks.classList.toggle('active');
     });
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+            mobileNavLinks.classList.remove('active');
         });
     });
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Active navigation link based on scroll position
     const sections = document.querySelectorAll('section');
-    const navLinksa = document.querySelectorAll('.nav-links a');
+    const navLinks = document.querySelectorAll('.nav-links a');
 
     window.addEventListener('scroll', function() {
         let current = '';
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        navLinksa.forEach(link => {
+        navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
@@ -81,9 +81,65 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Load projects dynamically from configuration
+    function loadProjects() {
+        const projectsGrid = document.getElementById('projects-grid');
+        
+        // Sort projects to put Nutribuddy and CodeSage first
+        const sortedProjects = [...projectsConfig].sort((a, b) => {
+            if (a.id === 'nutribuddy') return -1;
+            if (b.id === 'nutribuddy') return 1;
+            if (a.id === 'codesage') return -1;
+            if (b.id === 'codesage') return 1;
+            return 0;
+        });
+        
+        // Clear existing content
+        projectsGrid.innerHTML = '';
+        
+        // Add projects to the grid
+        sortedProjects.forEach(project => {
+            const projectCard = document.createElement('div');
+            projectCard.className = 'project-card';
+            projectCard.dataset.category = project.category;
+            
+            const tagsHTML = project.tags.map(tag => `<span>${tag}</span>`).join('');
+            
+            projectCard.innerHTML = `
+                <div class="project-img">
+                    <img src="${project.imagePath}" alt="${project.title}" onerror="this.src='assets/images/placeholder.jpg'">
+                </div>
+                <div class="project-info">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <div class="project-tags">
+                        ${tagsHTML}
+                    </div>
+                    <div class="project-links">
+                        <a href="${project.githubLink}" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="${project.demoLink}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            `;
+            
+            projectsGrid.appendChild(projectCard);
+        });
+        
+        // Preload all images to ensure they're available
+        sortedProjects.forEach(project => {
+            const img = new Image();
+            img.src = project.imagePath;
+            img.onerror = function() {
+                console.log(`Failed to load image: ${project.imagePath}`);
+            };
+        });
+    }
+    
+    // Load projects when the page is ready
+    loadProjects();
+
     // Projects Filter
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -96,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             
             // Filter projects
-            projectCards.forEach(card => {
+            document.querySelectorAll('.project-card').forEach(card => {
                 if (filter === 'all') {
                     card.style.display = 'block';
                 } else if (card.dataset.category === filter) {
@@ -106,13 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    });
-
-    // Fix for project images
-    document.querySelectorAll('.project-img img').forEach(img => {
-        img.onerror = function() {
-            this.src = 'assets/images/placeholder.jpg';
-        };
     });
 
     // Contact Form Submission
