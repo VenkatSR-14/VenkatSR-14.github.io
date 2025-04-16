@@ -1,226 +1,233 @@
+// Main JavaScript file
+
+// Initialize when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Typed.js with a slight delay to ensure it loads properly
-    setTimeout(function() {
-        const typed = new Typed('.typed-text', {
-            strings: ['Software Engineer', 'Data Scientist', 'Full Stack Developer', 'Machine Learning Engineer'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|'
-        });
-    }, 500);
+    // Initialize Typed.js
+    initTypedJs();
+    
+    // Initialize navbar scroll effect
+    initNavbarScroll();
+    
+    // Initialize smooth scrolling for navigation links
+    initSmoothScroll();
+    
+    // Initialize mobile menu toggle
+    initMobileMenu();
+    
+    // Initialize tab switching for experience section
+    initTabSwitching();
+    
+    // Load projects from configuration
+    loadProjects();
+    
+    // Initialize project filtering
+    initProjectFilter();
+    
+    // Initialize form submission
+    initContactForm();
+    
+    // Add animation to elements when they come into view
+    initScrollAnimations();
+});
 
-    // Mobile Navigation Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const mobileNavLinks = document.querySelector('.nav-links');
+// Initialize Typed.js for hero section
+function initTypedJs() {
+    const options = {
+        strings: [
+            'Software Engineer',
+            'Data Scientist',
+            'Full Stack Developer',
+            'Machine Learning Engineer'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1500,
+        startDelay: 500,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+    };
+    
+    const typed = new Typed('#typed-text', options);
+}
 
-    hamburger.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mobileNavLinks.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            mobileNavLinks.classList.remove('active');
-        });
-    });
-
-    // Navbar scroll effect
+// Initialize navbar scroll effect
+function initNavbarScroll() {
+    const header = document.getElementById('header');
+    
     window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
     });
+}
 
-    // Active navigation link based on scroll position
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    window.addEventListener('scroll', function() {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (window.scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // Experience Tabs
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const target = this.dataset.target;
-            
-            // Remove active class from all buttons and contents
-            tabBtns.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-            
-            // Add active class to clicked button and corresponding content
-            this.classList.add('active');
-            document.getElementById(`${target}-content`).classList.add('active');
-        });
-    });
-
-    // Load projects dynamically from configuration
-    function loadProjects() {
-        const projectsGrid = document.getElementById('projects-grid');
-        
-        // Sort projects to put Nutribuddy and CodeSage first
-        const sortedProjects = [...projectsConfig].sort((a, b) => {
-            if (a.id === 'nutribuddy') return -1;
-            if (b.id === 'nutribuddy') return 1;
-            if (a.id === 'codesage') return -1;
-            if (b.id === 'codesage') return 1;
-            return 0;
-        });
-        
-        // Clear existing content
-        projectsGrid.innerHTML = '';
-        
-        // Add projects to the grid
-        sortedProjects.forEach(project => {
-            const projectCard = document.createElement('div');
-            projectCard.className = 'project-card';
-            projectCard.dataset.category = project.category;
-            
-            const tagsHTML = project.tags.map(tag => `<span>${tag}</span>`).join('');
-            
-            projectCard.innerHTML = `
-                <div class="project-img">
-                    <img src="${project.imagePath}" alt="${project.title}" onerror="this.src='https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1189&q=80'">
-                </div>
-                <div class="project-info">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <div class="project-tags">
-                        ${tagsHTML}
-                    </div>
-                    <div class="project-links">
-                        <a href="${project.githubLink}" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="${project.demoLink}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            `;
-            
-            projectsGrid.appendChild(projectCard);
-        });
-        
-        // Preload all images to ensure they're available
-        sortedProjects.forEach(project => {
-            const img = new Image();
-            img.src = project.imagePath;
-            img.onerror = function() {
-                console.log(`Failed to load image: ${project.imagePath}`);
-            };
-        });
-    }
+// Initialize smooth scrolling for navigation links
+function initSmoothScroll() {
+    const navLinks = document.querySelectorAll('.nav-links a, .footer-links a, .hero-buttons a');
     
-    // Load projects when the page is ready
-    loadProjects();
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                    document.querySelector('.hamburger').classList.remove('active');
+                }
+            }
+        });
+    });
+}
 
-    // Projects Filter
-    const filterBtns = document.querySelectorAll('.filter-btn');
+// Initialize mobile menu toggle
+function initMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+}
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const filter = this.dataset.filter;
+// Initialize tab switching for experience section
+function initTabSwitching() {
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove active class from all tabs
+            tabLinks.forEach(tab => tab.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
             
+            // Add active class to current tab
+            this.classList.add('active');
+            
+            // Show corresponding tab content
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+}
+
+// Load projects from configuration
+function loadProjects() {
+    const projectsGrid = document.getElementById('projects-grid');
+    
+    if (!projectsGrid || !projectsConfig) return;
+    
+    // Clear existing projects
+    projectsGrid.innerHTML = '';
+    
+    // Loop through projects and create HTML
+    projectsConfig.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.className = `project-card ${project.category}`;
+        
+        // Create project HTML
+        projectCard.innerHTML = `
+            <div class="project-img">
+                <img src="${project.imagePath}" alt="${project.title}" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80';">
+            </div>
+            <div class="project-info">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-tags">
+                    ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
+                </div>
+                <div class="project-links">
+                    <a href="${project.githubLink}" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                    <a href="${project.demoLink}" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        `;
+        
+        projectsGrid.appendChild(projectCard);
+    });
+}
+
+// Initialize project filtering
+function initProjectFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
             // Remove active class from all buttons
-            filterBtns.forEach(btn => btn.classList.remove('active'));
+            filterButtons.forEach(btn => btn.classList.remove('active'));
             
             // Add active class to clicked button
             this.classList.add('active');
             
-            // Filter projects
-            document.querySelectorAll('.project-card').forEach(card => {
-                if (filter === 'all') {
-                    card.style.display = 'block';
-                } else if (card.dataset.category === filter) {
-                    card.style.display = 'block';
+            // Get filter value
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Show/hide projects based on filter
+            projectCards.forEach(card => {
+                if (filterValue === 'all' || card.classList.contains(filterValue)) {
+                    card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
             });
         });
     });
+}
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contactForm');
+// Initialize contact form submission
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // In a real implementation, you would send the form data to a server
-            // For now, just show an alert
-            alert('Thank you for your message! This is a demo form, so no message was actually sent.');
-            
-            // Reset the form
-            this.reset();
+            // In a real application, you would send the form data to a server
+            // For now, just show a success message
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
         });
     }
+}
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Animation on scroll (simple version)
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.skill-item, .project-card, .timeline-item');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            
-            if (elementPosition < screenPosition) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
+// Initialize scroll animations
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.skill-item, .project-card, .timeline-item, .contact-info-item');
+    
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+            rect.bottom >= 0
+        );
+    }
+    
+    // Function to add animation class when element is in viewport
+    function checkAnimations() {
+        animatedElements.forEach(element => {
+            if (isInViewport(element) && !element.classList.contains('animated')) {
+                element.classList.add('animated');
             }
         });
     }
     
-    // Set initial styles for animation
-    document.querySelectorAll('.skill-item, .project-card, .timeline-item').forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
+    // Check animations on scroll
+    window.addEventListener('scroll', checkAnimations);
     
-    // Run animation on load and scroll
-    window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
-});
+    // Check animations on page load
+    checkAnimations();
+}

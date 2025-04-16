@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkat - Portfolio</title>
+    <title>Venkat | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header id="header">
         <div class="container">
             <nav>
                 <div class="logo">
@@ -32,308 +33,205 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
         <div class="container">
             <div class="hero-content">
-                <h1>Hello, I'm <span>Venkat</span></h1>
-                <h2 class="typed-text"></h2>
-                <p>Experienced software engineer proficient in full-stack development, microservices, cloud technologies, and AI integration.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Contact Me</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                <div class="hero-text">
+                    <h1>Hi, I'm <span>Venkat</span></h1>
+                    <h2 id="typed-text"></h2>
+                    <p>I'm passionate about creating innovative solutions through code and data. With expertise in both software engineering and data science, I build applications that make a difference.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                    <div class="resume-buttons">
+                        <a href="C:\Users\18573\OneDrive\Desktop\Venkat_resume_post_coop\Venkat_SWE_Resume.pdf" target="_blank" class="btn btn-secondary">SWE Resume</a>
+                        <a href="C:\Users\18573\OneDrive\Desktop\Venkat_resume_post_coop\Venkat_DS_Resume.pdf" target="_blank" class="btn btn-secondary">DS Resume</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/venkat-srinivasa-raghavan-36317b123/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/VenkatSR-14" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:sraghavanvenkat@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-                <div class="resume-buttons">
-                    <a href="assets/Venkat_SDE_Resume_FT.pdf" target="_blank" class="btn btn-outline">Software Engineering Resume</a>
-                    <a href="assets/Venkat_DS_Resume_FT.pdf" target="_blank" class="btn btn-outline">Data Science Resume</a>
-                </div>
-                <div class="social-links hero-social">
-                    <a href="https://www.linkedin.com/in/venkat-srinivasa-raghavan-36317b123/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/VenkatSR-14" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:sraghavanvenkat@gmail.com"><i class="fas fa-envelope"></i></a>
+                <div class="hero-image">
+                    <img src="assets/images/MyPhoto.jpg" alt="Venkat" class="hero-profile-img">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
                 <h2>About Me</h2>
-                <div class="underline"></div>
             </div>
             <div class="about-content">
                 <div class="about-image">
                     <img src="assets/images/MyPhoto.jpg" alt="Venkat" class="profile-image">
                 </div>
                 <div class="about-text">
-                    <p>I am an experienced software engineer with over 3 years of professional experience in full-stack development, microservices, cloud technologies (AWS, Kubernetes), and AI integration. I'm adept at optimizing complex systems for high performance, scalability, and impactful business outcomes.</p>
-                    <p>With a Master's degree in Data Science from Northeastern University (4.0/4.0) and a Bachelor's in Electronics & Instrumentation from R.V College of Engineering, I bring a strong educational foundation to my technical work.</p>
-                    <p>My expertise spans both software engineering and data science, allowing me to approach problems with a multidisciplinary perspective and deliver innovative solutions that drive business value.</p>
+                    <p>Hello! I'm Venkat, a passionate Software Engineer and Data Scientist with a strong foundation in building innovative applications and deriving insights from data.</p>
+                    <p>I specialize in full-stack development, machine learning, and data analysis. My journey in tech has equipped me with a diverse skill set that allows me to approach problems from multiple angles and develop comprehensive solutions.</p>
+                    <p>I'm constantly learning and exploring new technologies to stay at the forefront of the rapidly evolving tech landscape. My goal is to leverage technology to create impactful solutions that address real-world challenges.</p>
+                    <p>When I'm not coding, you can find me exploring new hiking trails, reading about the latest tech trends, or experimenting with new recipes in the kitchen.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Experience</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="experience-tabs">
-                <button class="tab-btn active" data-target="swe">Software Engineering</button>
-                <button class="tab-btn" data-target="ds">Data Science</button>
-            </div>
-            <div class="experience-content">
-                <div class="tab-content active" id="swe-content">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Jan 2024 - Jul 2024</div>
-                            <div class="timeline-content">
-                                <h3>Software Engineer</h3>
-                                <h4>Fidelity Investments | Boston, MA</h4>
-                                <p>Developed ETL pipelines, built GPT-4-powered RAG systems, and created sentiment analytics plugins using microservices architecture.</p>
-                                <div class="tags">
-                                    <span>ETL Pipelines</span>
-                                    <span>LLMs (RAG)</span>
-                                    <span>Microservices</span>
-                                    <span>AWS</span>
-                                    <span>Kubernetes</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Jan 2021 - Dec 2022</div>
-                            <div class="timeline-content">
-                                <h3>Software Engineer</h3>
-                                <h4>Airbus | Bengaluru, India</h4>
-                                <p>Developed document management systems, engineered cost-saving workflows, built data validation frameworks, and architected dynamic layout engines.</p>
-                                <div class="tags">
-                                    <span>Node.js</span>
-                                    <span>React</span>
-                                    <span>AWS</span>
-                                    <span>Docker</span>
-                                    <span>MySQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Jun 2020 - Dec 2020</div>
-                            <div class="timeline-content">
-                                <h3>Associate Software Engineer</h3>
-                                <h4>Airbus | Bengaluru, India</h4>
-                                <p>Optimized SQL procedures, developed forecasting tools, and built Node.js-Angular applications for admin settings and config management.</p>
-                                <div class="tags">
-                                    <span>SQL</span>
-                                    <span>Node.js</span>
-                                    <span>Angular</span>
-                                    <span>AWS</span>
-                                    <span>Power BI</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Aug 2019 - Aug 2020</div>
-                            <div class="timeline-content">
-                                <h3>Machine Learning Researcher</h3>
-                                <h4>R.V College of Engineering | Bengaluru, India</h4>
-                                <p>Developed an IoT-based spine diagnostic system and built machine learning models for spine condition classification.</p>
-                                <div class="tags">
-                                    <span>Python</span>
-                                    <span>Machine Learning</span>
-                                    <span>IoT</span>
-                                    <span>GitHub</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-content" id="ds-content">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Jan 2024 - Jul 2024</div>
-                            <div class="timeline-content">
-                                <h3>Data Scientist</h3>
-                                <h4>Fidelity Investments | Boston, MA</h4>
-                                <p>Built GPT-4-powered RAG systems for NER extraction and developed sentiment analytics for real-time investor insights.</p>
-                                <div class="tags">
-                                    <span>RAG</span>
-                                    <span>NER</span>
-                                    <span>AWS SageMaker</span>
-                                    <span>ChromaDB</span>
-                                    <span>Elasticsearch</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Apr 2025</div>
-                            <div class="timeline-content">
-                                <h3>Nutribuddy Project</h3>
-                                <h4>Personal Project</h4>
-                                <p>Developed a personalized nutrition and exercise recommendation system using LLMs to parse user history and biometric data.</p>
-                                <div class="tags">
-                                    <span>Transformers</span>
-                                    <span>FastAPI</span>
-                                    <span>Postgres</span>
-                                    <span>React</span>
-                                    <span>Docker</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Jan 2025</div>
-                            <div class="timeline-content">
-                                <h3>CodeSage</h3>
-                                <h4>Personal Project</h4>
-                                <p>Built an AI-powered code review system using Mistral-7B, fine-tuned for pull request analysis and integrated into CI pipeline.</p>
-                                <div class="tags">
-                                    <span>Fine-tuning</span>
-                                    <span>FastAPI</span>
-                                    <span>React.js</span>
-                                    <span>Git Actions</span>
-                                    <span>CI/CD</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Aug 2019 - Aug 2020</div>
-                            <div class="timeline-content">
-                                <h3>Spine Diagnostic System</h3>
-                                <h4>R.V College of Engineering</h4>
-                                <p>Built and trained logistic regression and ANN models for spine condition classification, achieving an F1 score of 0.98.</p>
-                                <div class="tags">
-                                    <span>Python</span>
-                                    <span>Machine Learning</span>
-                                    <span>IoT</span>
-                                    <span>ANN</span>
-                                    <span>Patented Study</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
                 <h2>My Skills</h2>
-                <div class="underline"></div>
             </div>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Software Engineering</h3>
+                    <h3>Programming Languages</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-java"></i></div>
-                            <h4>Java</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
                             <h4>Python</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <h4>Java</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
                             <h4>JavaScript</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-react"></i></div>
-                            <h4>React</h4>
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>C/C++</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-                            <h4>Node.js</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
                             <h4>SQL</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-aws"></i></div>
-                            <h4>AWS</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
-                            <h4>Docker</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-cubes"></i></div>
-                            <h4>Kubernetes</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-angular"></i></div>
-                            <h4>Angular</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
-                            <h4>.NET</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                            <h4>Git</h4>
                         </div>
                     </div>
                 </div>
+                
                 <div class="skill-category">
-                    <h3>Data Science</h3>
+                    <h3>Web Development</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4>HTML5</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS3</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>React</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h4>Node.js</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>Express</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data Science & ML</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
                             <h4>Machine Learning</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
                             <h4>Data Analysis</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                            <h4>Statistical Modeling</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
                             <h4>Deep Learning</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-table"></i></div>
-                            <h4>Pandas</h4>
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Data Visualization</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-calculator"></i></div>
-                            <h4>NumPy</h4>
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4>NLP</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <h4>Git</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-desktop"></i></div>
-                            <h4>Visualization</h4>
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <h4>Docker</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h4>Big Data</h4>
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <h4>AWS</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                            <h4>LLMs</h4>
+                            <div class="skill-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h4>GCP</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-search"></i></div>
-                            <h4>NER</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-server"></i></div>
-                            <h4>MLOps</h4>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
-                            <h4>ETL Pipelines</h4>
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>MongoDB</h4>
                         </div>
                     </div>
                 </div>
@@ -341,77 +239,199 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience</h2>
+            </div>
+            <div class="experience-content">
+                <p class="experience-intro">My professional journey blends software engineering and data science expertise, allowing me to approach problems with a multidisciplinary perspective and deliver innovative solutions.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jan 2024 - Jul 2024</div>
+                        <div class="timeline-content">
+                            <h3>Software Engineer & Data Scientist</h3>
+                            <h4>Fidelity Investments | Boston, MA</h4>
+                            <p>Developed ETL pipelines, built GPT-4-powered RAG systems for NER extraction, and created sentiment analytics plugins using microservices architecture for real-time investor insights.</p>
+                            <div class="tags">
+                                <span>ETL Pipelines</span>
+                                <span>LLMs (RAG)</span>
+                                <span>NER</span>
+                                <span>AWS</span>
+                                <span>Microservices</span>
+                                <span>Elasticsearch</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jan 2021 - Dec 2022</div>
+                        <div class="timeline-content">
+                            <h3>Software Engineer</h3>
+                            <h4>Airbus | Bengaluru, India</h4>
+                            <p>Developed document management systems, engineered cost-saving workflows, built data validation frameworks, and architected dynamic layout engines while implementing data analytics solutions.</p>
+                            <div class="tags">
+                                <span>Node.js</span>
+                                <span>React</span>
+                                <span>AWS</span>
+                                <span>Docker</span>
+                                <span>MySQL</span>
+                                <span>Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jun 2020 - Dec 2020</div>
+                        <div class="timeline-content">
+                            <h3>Associate Software Engineer</h3>
+                            <h4>Airbus | Bengaluru, India</h4>
+                            <p>Optimized SQL procedures, developed forecasting tools, and built Node.js-Angular applications for admin settings and config management with integrated data visualization.</p>
+                            <div class="tags">
+                                <span>SQL</span>
+                                <span>Node.js</span>
+                                <span>Angular</span>
+                                <span>AWS</span>
+                                <span>Power BI</span>
+                                <span>Forecasting</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Apr 2023</div>
+                        <div class="timeline-content">
+                            <h3>Nutribuddy Project</h3>
+                            <h4>Personal Project</h4>
+                            <p>Developed a personalized nutrition and exercise recommendation system using LLMs to parse user history and biometric data, combining ML expertise with full-stack development.</p>
+                            <div class="tags">
+                                <span>Transformers</span>
+                                <span>FastAPI</span>
+                                <span>Postgres</span>
+                                <span>React</span>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jan 2023</div>
+                        <div class="timeline-content">
+                            <h3>CodeSage</h3>
+                            <h4>Personal Project</h4>
+                            <p>Built an AI-powered code review system using Mistral-7B, fine-tuned for pull request analysis and integrated into CI pipeline, showcasing both ML and software engineering skills.</p>
+                            <div class="tags">
+                                <span>Fine-tuning</span>
+                                <span>FastAPI</span>
+                                <span>React.js</span>
+                                <span>Git Actions</span>
+                                <span>CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Aug 2019 - Aug 2020</div>
+                        <div class="timeline-content">
+                            <h3>Machine Learning Researcher</h3>
+                            <h4>R.V College of Engineering | Bengaluru, India</h4>
+                            <p>Developed an IoT-based spine diagnostic system and built machine learning models for spine condition classification, achieving an F1 score of 0.98 in this patented study.</p>
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>IoT</span>
+                                <span>ANN</span>
+                                <span>Patented Study</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
                 <h2>My Projects</h2>
-                <div class="underline"></div>
             </div>
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="swe">Software Engineering</button>
                 <button class="filter-btn" data-filter="ds">Data Science</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
             </div>
-            <div id="projects-grid" class="projects-grid">
-                <!-- Projects will be dynamically loaded here from projects-config.js -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded dynamically -->
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Contact Me</h2>
-                <div class="underline"></div>
+                <h2>Get In Touch</h2>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-info-item">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>sraghavanvenkat@gmail.com</p>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:sraghavanvenkat@gmail.com">sraghavanvenkat@gmail.com</a>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-info-item">
                         <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone-alt"></i>
                         </div>
-                        <div class="contact-text">
-                            <h3>Phone</h3>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
                             <p>(206) 518-8678</p>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-info-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
+                        <div class="contact-details">
+                            <h4>Location</h4>
                             <p>Boston, MA</p>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/venkat-srinivasa-raghavan-36317b123/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/VenkatSR-14" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:sraghavanvenkat@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/venkat-srinivasa-raghavan-36317b123/" target="_blank">linkedin.com/in/venkat-srinivasa-raghavan-36317b123</a>
+                        </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -420,19 +440,31 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Venkat. All Rights Reserved.</p>
-                <div class="back-to-top">
-                    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/venkat-srinivasa-raghavan-36317b123/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/VenkatSR-14" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:sraghavanvenkat@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Venkat. All Rights Reserved.</p>
+                    <p>Software Engineer & Data Scientist</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/projects-config.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </body>
 </html>
