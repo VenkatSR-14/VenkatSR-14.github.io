@@ -254,6 +254,30 @@ nav {
     margin-top: 20px;
 }
 
+.hero-social {
+    margin-top: 30px;
+}
+
+.hero-social a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 20px;
+    transition: var(--transition);
+    margin-right: 15px;
+}
+
+.hero-social a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+}
+
 /* About Section */
 .about-content {
     display: flex;
