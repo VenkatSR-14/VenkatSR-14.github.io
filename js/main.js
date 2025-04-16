@@ -14,16 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize mobile menu toggle
     initMobileMenu();
     
-    // Initialize tab switching for experience section
-    initTabSwitching();
-    
     // Load projects from configuration
     loadProjects();
     
     // Initialize project filtering
     initProjectFilter();
     
-    // Initialize form submission
+    // Initialize contact form (for form submission feedback)
     initContactForm();
     
     // Add animation to elements when they come into view
@@ -102,27 +99,6 @@ function initMobileMenu() {
     });
 }
 
-// Initialize tab switching for experience section
-function initTabSwitching() {
-    const tabLinks = document.querySelectorAll('.tab-link');
-    const tabPanes = document.querySelectorAll('.tab-pane');
-    
-    tabLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Remove active class from all tabs
-            tabLinks.forEach(tab => tab.classList.remove('active'));
-            tabPanes.forEach(pane => pane.classList.remove('active'));
-            
-            // Add active class to current tab
-            this.classList.add('active');
-            
-            // Show corresponding tab content
-            const tabId = this.getAttribute('data-tab');
-            document.getElementById(tabId).classList.add('active');
-        });
-    });
-}
-
 // Load projects from configuration
 function loadProjects() {
     const projectsGrid = document.getElementById('projects-grid');
@@ -187,18 +163,16 @@ function initProjectFilter() {
     });
 }
 
-// Initialize contact form submission
+// Initialize contact form submission feedback
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // In a real application, you would send the form data to a server
-            // For now, just show a success message
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
+        // Add a success message after form submission
+        // This is optional since Formspree will handle the actual submission
+        contactForm.addEventListener('submit', function() {
+            // You can add additional client-side validation here if needed
+            console.log('Form submitted to Formspree');
         });
     }
 }
